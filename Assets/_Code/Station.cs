@@ -1,34 +1,56 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
-public class Station : MonoBehaviour
+public enum StationType
+{
+    Cutting,
+    Crushing,
+    Mixing
+}
+
+public abstract class Station : MonoBehaviour
 {
     private List<Draggable> draggableObjects = new List<Draggable>();
     private List<Tool> tools = new List<Tool>();
 
-    //private abstract void StartRecipieMinigame();
+    public abstract List<Recipe> Recipes { get; }
+    public abstract StationType StationType { get; }
+
+    public abstract void StartRecipieMinigame();
+
+    public void CheckForPossibleRecipieStart(List<Recipe> recipies)
+    {
+        foreach (var recipe in recipies)
+        {
+            if (CanRecipeStart(recipe))
+            {
+                Debug.Log("recipie started");
+                StartRecipieMinigame();
+            }
+        }
+    }
 
     private bool CanRecipeStart(Recipe recipe)
     {
-        if (recipe.RequiredStation != null && recipe.RequiredStation != this)
+        if (recipe.RequiredStation != null && recipe.RequiredStation != StationType)
         {
-            Debug.Log("Recipe requires a different station.");
+            throw new System.NotImplementedException("recipie is not for this station");
+        }
+
+        if (recipe.RequiredTool != null && !tools.Any(x => x.ToolType == recipe.RequiredTool))
+        {
             return false;
         }
 
-        if (recipe.RequiredTool != null && !tools.Contains(recipe.RequiredTool))
-        {
-            Debug.Log("Recipe requires a different tool.");
-            return false;
-        }
 
-        foreach (Ingredient ingredient in recipe.Ingredients)
+        foreach (IngredientType ingredientType in recipe.Ingredients)
         {
             bool ingredientFound = false;
             foreach (Draggable draggableObject in draggableObjects)
             {
-                if (draggableObject is Ingredient ingredientObject && ingredientObject.IngredientType == ingredient.IngredientType)
+                if (draggableObject is Ingredient ingredientObject && ingredientObject.IngredientType == ingredientType)
                 {
                     ingredientFound = true;
                     break;
@@ -37,7 +59,6 @@ public class Station : MonoBehaviour
 
             if (!ingredientFound)
             {
-                Debug.Log("Missing ingredient: " + ingredient.IngredientType);
                 return false;
             }
         }
@@ -50,20 +71,17 @@ public class Station : MonoBehaviour
         Draggable draggable = other.GetComponent<Draggable>();
         if (draggable != null && !draggableObjects.Contains(draggable))
         {
-            // Add the draggable object to the list
             draggableObjects.Add(draggable);
-            // Perform any desired action here
             Debug.Log("Draggable object placed on station.");
         }
 
         Tool tool = other.GetComponent<Tool>();
         if (tool != null && !tools.Contains(tool))
         {
-            // Add the tool object to the list
             tools.Add(tool);
-            // Perform any desired action here
             Debug.Log("Tool placed on station.");
         }
+        CheckForPossibleRecipieStart(Recipes);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -71,18 +89,14 @@ public class Station : MonoBehaviour
         Draggable draggable = other.GetComponent<Draggable>();
         if (draggable != null && draggableObjects.Contains(draggable))
         {
-            // Remove the draggable object from the list
             draggableObjects.Remove(draggable);
-            // Perform any desired action here
             Debug.Log("Draggable object removed from station.");
         }
 
         Tool tool = other.GetComponent<Tool>();
         if (tool != null && tools.Contains(tool))
         {
-            // Remove the tool object from the list
             tools.Remove(tool);
-            // Perform any desired action here
             Debug.Log("Tool removed from station.");
         }
     }

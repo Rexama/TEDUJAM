@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewRecipe", menuName = "Recipe")]
 public class Recipe : ScriptableObject
 {
-    public Station RequiredStation;
-    public Tool RequiredTool;
-    public List<Ingredient> Ingredients;
+    public StationType RequiredStation;
+    public ToolType RequiredTool;
+    public List<IngredientType> Ingredients;
 }
