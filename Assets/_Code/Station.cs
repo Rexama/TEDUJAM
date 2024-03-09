@@ -21,7 +21,6 @@ public abstract class Station : MonoBehaviour
     private Recipe activeRecipe;
     public void ProduceRecipe()
     {
-        Debug.Log("recipieproduce");
         var recipeIngredients = new List<IngredientType>(activeRecipe.Ingredients);
 
         var list = new List<Ingredient>();
@@ -45,7 +44,6 @@ public abstract class Station : MonoBehaviour
 
     public void CheckForPossibleRecipieStart()
     {
-        Debug.Log("recip");
         foreach (var recipe in Recipes)
         {
             if (CanRecipeStart(recipe))
@@ -95,7 +93,6 @@ public abstract class Station : MonoBehaviour
         if (draggable != null && !draggableObjects.Contains(draggable))
         {
             draggableObjects.Add(draggable);
-            Debug.Log("Draggable object placed on station.");
         }
     }
 
@@ -105,7 +102,6 @@ public abstract class Station : MonoBehaviour
         if (draggable != null && draggableObjects.Contains(draggable))
         {
             draggableObjects.Remove(draggable);
-            Debug.Log("Draggable object removed from station.");
         }
     }
 }
