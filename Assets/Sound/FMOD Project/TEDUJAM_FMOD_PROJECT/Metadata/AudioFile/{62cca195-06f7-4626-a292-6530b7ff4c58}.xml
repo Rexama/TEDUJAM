@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{62cca195-06f7-4626-a292-6530b7ff4c58}">
+		<property name="assetPath">
+			<value>Food &amp; Drink, Tableware, Spoon, Stir, Cereal In Bowl 01 SND22040 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.7262083333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{835fcb68-19eb-4841-a543-c40dad28523e}</destination>
+		</relationship>
+	</object>
+</objects>
