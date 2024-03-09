@@ -49,7 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipes:
-  - {fileID: 11400000, guid: c1244a11e33b03c468a8219018d025c1, type: 2}
+  - {fileID: 11400000, guid: c9cde62e2c0dc944c8ce00c10de3b338, type: 2}
+  - {fileID: 11400000, guid: 316bb2057e2ab174ea33b7808af1e4af, type: 2}
+  - {fileID: 11400000, guid: f457d1747066e744397343999b0eb387, type: 2}
+  miniGamePanel: {fileID: 0}
 --- !u!212 &5275277567524715485
 SpriteRenderer:
   m_ObjectHideFlags: 0

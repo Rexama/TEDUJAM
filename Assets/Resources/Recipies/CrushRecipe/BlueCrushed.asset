@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db37f5bfacbd14942aa39959f52dc728, type: 3}
-  m_Name: RBMCutted
+  m_Name: BlueCrushed
   m_EditorClassIdentifier: 
-  RequiredStation: 0
-  RequiredTool: 0
-  Ingredients: 000000000100000002000000
-  EndProduct: {fileID: 5791780851681269461, guid: 1646ebb1c117975408360e1bca29cf23, type: 3}
+  RequiredStation: 1
+  RequiredTool: 2
+  Ingredients: 01000000
+  EndProduct: {fileID: 8021236246440639526, guid: d65939cf1f71d8244a1c29a10c9531cf, type: 3}
