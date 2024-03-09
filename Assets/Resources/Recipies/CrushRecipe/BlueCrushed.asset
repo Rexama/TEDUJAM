@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db37f5bfacbd14942aa39959f52dc728, type: 3}
-  m_Name: Mixing1
+  m_Name: BlueCrushed
   m_EditorClassIdentifier: 
-  RequiredStation: 2
-  RequiredTool: 1
-  Ingredients: 030000000400000005000000
-  EndProduct: {fileID: 5012782857980559251, guid: 42d09179e1aad1a459a1a79b8718413e, type: 3}
+  RequiredStation: 1
+  RequiredTool: 2
+  Ingredients: 01000000
+  EndProduct: {fileID: 8021236246440639526, guid: d65939cf1f71d8244a1c29a10c9531cf, type: 3}
