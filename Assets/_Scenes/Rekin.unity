@@ -735,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491918990}
   - component: {fileID: 1491918991}
+  - component: {fileID: 1491918992}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -772,9 +773,23 @@ MonoBehaviour:
   CuttingStation: {fileID: 1018516484}
   MixingStation: {fileID: 1300658620}
   CrushingStation: {fileID: 1562004257}
+  CatManager: {fileID: 0}
   Knife: {fileID: 69403317}
   Spoon: {fileID: 1591215612}
   Crusher: {fileID: 1889845087}
+  ScreenTopEdgeY: 5
+--- !u!114 &1491918992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491918989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53964c278eb0d4498fe1280cfd46a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1562004257 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6140080271269291505, guid: 00a8ab5e4dfbf3c4b848305b408acab3, type: 3}
@@ -1124,7 +1139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1929340309
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1789,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 560315019353145643, guid: ed3208f099515054fa5a82f6abd59f92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 560315019353145643, guid: ed3208f099515054fa5a82f6abd59f92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2032,7 +2047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975750005489480468, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5975750005489480468, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2077,11 +2092,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1262715030299561143, guid: b27bf1166c58fb9478e0ac6b719e6034, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.48
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1262715030299561143, guid: b27bf1166c58fb9478e0ac6b719e6034, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.12
       objectReference: {fileID: 0}
     - target: {fileID: 1262715030299561143, guid: b27bf1166c58fb9478e0ac6b719e6034, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2157,7 +2172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101714419495289541, guid: 272db7735ba023e439692d32ad6a532d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7101714419495289541, guid: 272db7735ba023e439692d32ad6a532d, type: 3}
       propertyPath: m_LocalRotation.w

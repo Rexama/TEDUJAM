@@ -24,19 +24,29 @@ public abstract class Station : MonoBehaviour
         Debug.Log("recipieproduce");
         var recipeIngredients = new List<IngredientType>(activeRecipe.Ingredients);
 
+        var list = new List<Ingredient>();
         foreach (Draggable draggableObject in draggableObjects)
         {
             if (draggableObject is Ingredient ingredientObject && recipeIngredients.Contains(ingredientObject.IngredientType))
             {
-                Destroy(draggableObject.gameObject);
+                list.Add(ingredientObject);
+                recipeIngredients.Remove(ingredientObject.IngredientType);
             }
         }
+
+        foreach(var ing in list)
+        {
+            draggableObjects.Remove(ing);
+            Destroy(ing.gameObject);
+        }
+
         Instantiate(activeRecipe.EndProduct,transform.position, Quaternion.identity);
     }
 
-    public void CheckForPossibleRecipieStart(List<Recipe> recipies)
+    public void CheckForPossibleRecipieStart()
     {
-        foreach (var recipe in recipies)
+        Debug.Log("recip");
+        foreach (var recipe in Recipes)
         {
             if (CanRecipeStart(recipe))
             {
@@ -79,22 +89,23 @@ public abstract class Station : MonoBehaviour
         return true;
     }
 
-    public bool IsColliding(GameObject obj)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Collider2D collider = obj.GetComponent<Collider2D>();
-        return collider != null && collider.IsTouching(GetComponent<Collider2D>());
+        Draggable draggable = other.GetComponent<Draggable>();
+        if (draggable != null && !draggableObjects.Contains(draggable))
+        {
+            draggableObjects.Add(draggable);
+            Debug.Log("Draggable object placed on station.");
+        }
     }
 
-    public void AddToDraggables(Draggable obj)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        draggableObjects.Add(obj);
-        Debug.Log(obj.name + " added to station.");
-        CheckForPossibleRecipieStart(Recipes);
-    }
-
-    public void RemoveFromDraggables(Draggable obj)
-    {
-        draggableObjects.Remove(obj);
-        Debug.Log(obj.name + " added to station.");
+        Draggable draggable = other.GetComponent<Draggable>();
+        if (draggable != null && draggableObjects.Contains(draggable))
+        {
+            draggableObjects.Remove(draggable);
+            Debug.Log("Draggable object removed from station.");
+        }
     }
 }

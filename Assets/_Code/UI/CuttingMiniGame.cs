@@ -56,6 +56,7 @@ public class CuttingMiniGame : MiniGamePanel
             node.transform.DOMoveX(nodeEndPoint.transform.position.x, speed).SetSpeedBased().SetEase(Ease.Linear).OnComplete(() => _destroyNode(node));
             yield return new WaitForSeconds(delay);
         }
+        yield return new WaitForSeconds(1);
         WinMiniGame();
     }
 
