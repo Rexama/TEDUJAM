@@ -2407,6 +2407,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226815870925390569, guid: 105f57bf8c5e17d4b85e760d4231108d, type: 3}
+      propertyPath: recipes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226815870925390569, guid: 105f57bf8c5e17d4b85e760d4231108d, type: 3}
       propertyPath: MixingMiniGamePanel
       value: 
       objectReference: {fileID: 1110522467}

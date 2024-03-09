@@ -4,12 +4,11 @@
   "State": [
     {
       "WindowType": "MainWindow",
-      "WindowState": "Maximized",
       "Window": {
-        "Left": 0,
-        "Top": 0,
-        "Width": 2560,
-        "Height": 1392
+        "Left": -32000,
+        "Top": -32000,
+        "Width": 2576,
+        "Height": 1408
       },
       "Docks": [
         {
@@ -26,8 +25,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 81,
-              "Column": 110,
+              "Line": 79,
+              "Column": 44,
               "IsPinned": false,
               "IsActive": true,
               "IsSelected": true
@@ -92,8 +91,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 4,
-              "Column": 1,
+              "Line": 98,
+              "Column": 52,
               "IsPinned": false
             },
             {
