@@ -776,7 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   station: {fileID: 1300658620}
   minDistance: 120
-  maxDistance: 160
+  maxDistance: 170
   degreesTurned: 0
   degreesTarget: 720
   area: {fileID: 1368941626}
@@ -1058,6 +1058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491918990}
   - component: {fileID: 1491918991}
+  - component: {fileID: 1491918992}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1100,6 +1101,18 @@ MonoBehaviour:
   Spoon: {fileID: 1591215612}
   Crusher: {fileID: 1889845087}
   ScreenTopEdgeY: 5
+--- !u!114 &1491918992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491918989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53964c278eb0d4498fe1280cfd46a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1506692272
 GameObject:
   m_ObjectHideFlags: 0

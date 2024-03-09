@@ -4,11 +4,12 @@
   "State": [
     {
       "WindowType": "MainWindow",
+      "WindowState": "Maximized",
       "Window": {
-        "Left": -32000,
-        "Top": -32000,
-        "Width": 2576,
-        "Height": 1408
+        "Left": 0,
+        "Top": 0,
+        "Width": 2560,
+        "Height": 1392
       },
       "Docks": [
         {
@@ -25,11 +26,9 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 79,
-              "Column": 44,
-              "IsPinned": false,
-              "IsActive": true,
-              "IsSelected": true
+              "Line": 61,
+              "Column": 10,
+              "IsPinned": false
             },
             {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\CuttingStation.cs",
@@ -91,9 +90,11 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 98,
-              "Column": 52,
-              "IsPinned": false
+              "Line": 47,
+              "Column": 27,
+              "IsPinned": false,
+              "IsActive": true,
+              "IsSelected": true
             },
             {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\Tool.cs",
