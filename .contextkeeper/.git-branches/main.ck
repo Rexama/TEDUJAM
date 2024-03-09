@@ -4,31 +4,16 @@
   "State": [
     {
       "WindowType": "MainWindow",
+      "WindowState": "Maximized",
       "Window": {
-        "Left": -32000,
-        "Top": -32000,
-        "Width": 2576,
-        "Height": 1408
+        "Left": 0,
+        "Top": 0,
+        "Width": 2560,
+        "Height": 1392
       },
       "Docks": [
         {
           "Documents": [
-            {
-              "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\UI\\Cutter.cs",
-              "RelativePath": "..\\..\\Assets\\_Code\\UI\\Cutter.cs",
-              "FullName": "Cutter.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 669
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 1,
-              "Column": 1,
-              "IsPinned": false
-            },
             {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\UI\\MixingMiniGame.cs",
               "RelativePath": "..\\..\\Assets\\_Code\\UI\\MixingMiniGame.cs",
@@ -41,24 +26,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 70,
-              "Column": 53,
-              "IsPinned": false
-            },
-            {
-              "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\UI\\CuttingMiniGame.cs",
-              "RelativePath": "..\\..\\Assets\\_Code\\UI\\CuttingMiniGame.cs",
-              "FullName": "CuttingMiniGame.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 669
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 59,
-              "Column": 16,
+              "Line": 81,
+              "Column": 110,
               "IsPinned": false,
               "IsActive": true,
               "IsSelected": true

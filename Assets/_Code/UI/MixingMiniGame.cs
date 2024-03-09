@@ -4,6 +4,7 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MixingMiniGame : MiniGamePanel
 {
@@ -32,6 +33,9 @@ public class MixingMiniGame : MiniGamePanel
     [SerializeField]
     private RectTransform area;
 
+    [SerializeField]
+    private Slider progressBar;
+
     public override void StartGame()
     {
         StartCoroutine(WaitAndStart());
@@ -55,10 +59,6 @@ public class MixingMiniGame : MiniGamePanel
             {
                 LoseMiniGame();
             }
-            else
-            {
-                WinMiniGame();
-            }
         }
     }
 
@@ -67,7 +67,19 @@ public class MixingMiniGame : MiniGamePanel
         if (mixing)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(area, Input.mousePosition, null, out var rectPos);
-            Debug.Log(Vector2.Distance(area.position, rectPos));
+            var dist = rectPos.magnitude;
+            if (dist < minDistance || dist > maxDistance)
+            {
+                LoseMiniGame();
+            }
+            if (degreesTurned >= degreesTarget)
+            {
+                WinMiniGame();
+            }
+            var angle = Vector2.SignedAngle(prevDir, rectPos.normalized);
+            degreesTurned -= angle;
+            progressBar.SetValueWithoutNotify(Mathf.Clamp(degreesTurned, 0, float.MaxValue) / degreesTarget);
+            prevDir = rectPos.normalized;
         }
     }
 

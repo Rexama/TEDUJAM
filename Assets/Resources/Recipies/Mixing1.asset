@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RequiredStation: 2
   RequiredTool: 1
-  Ingredients: 030000000400000005000000
-  EndProduct: {fileID: 5012782857980559251, guid: 42d09179e1aad1a459a1a79b8718413e, type: 3}
+  Ingredients: 03000000
+  EndProduct: {fileID: 3491223558638776072, guid: b8e8bc74248eee64ab11251fd976e10c, type: 3}
