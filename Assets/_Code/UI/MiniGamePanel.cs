@@ -8,6 +8,7 @@ public abstract class MiniGamePanel : UIBehaviour
     public void OpenMiniGame()
     {
         gameObject.SetActive(true);
+        StartGame();
     }
 
     public void CloseMiniGame()

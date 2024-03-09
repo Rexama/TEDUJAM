@@ -8,6 +8,9 @@ using UnityEngine.EventSystems;
 public class CuttingMiniGame : MiniGamePanel
 {
     [SerializeField]
+    public Cutter cutter;
+
+    [SerializeField]
     public GameObject nodePrefab;
 
     [SerializeField]
@@ -24,11 +27,12 @@ public class CuttingMiniGame : MiniGamePanel
 
     [SerializeField]
     public float delay;
+    
 
-    public void Start()
-    {
-        StartGame();
-    }
+    //public void Start()
+    //{
+    //    StartGame();
+    //}
 
     public override void StartGame()
     {
@@ -37,7 +41,11 @@ public class CuttingMiniGame : MiniGamePanel
 
     public void OnCutButtonPressed()
     {
-        Debug.Log("asd");
+        if (cutter.CollisionList.Count == 1)
+        {
+            cutter.CollisionList[0].transform.DOKill();
+            Destroy(cutter.CollisionList[0]);
+        }
     }
 
     IEnumerator SpawnNodes()
@@ -55,5 +63,4 @@ public class CuttingMiniGame : MiniGamePanel
         Debug.Log("fail");
         Destroy(obj);
     }
-
 }

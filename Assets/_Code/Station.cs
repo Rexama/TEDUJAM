@@ -66,19 +66,35 @@ public abstract class Station : MonoBehaviour
         return true;
     }
 
+    private void OnMouseEnter()
+    {
+        Debug.Log("ASD");
+    }
+
+    private void OnMouseExit()
+    {
+        Debug.Log("EX");
+    }
+
+
+    private Draggable candidateAddDragable;
+    private Draggable candidateRemoveDragable;
+    private Tool candidateAddTool;
+    private Tool candidateRemoveTool;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Draggable draggable = other.GetComponent<Draggable>();
         if (draggable != null && !draggableObjects.Contains(draggable))
         {
-            draggableObjects.Add(draggable);
+            candidateAddDragable = draggable;
             Debug.Log("Draggable object placed on station.");
         }
 
         Tool tool = other.GetComponent<Tool>();
         if (tool != null && !tools.Contains(tool))
         {
-            tools.Add(tool);
+            candidateAddTool = tool;
             Debug.Log("Tool placed on station.");
         }
         CheckForPossibleRecipieStart(Recipes);
@@ -89,15 +105,50 @@ public abstract class Station : MonoBehaviour
         Draggable draggable = other.GetComponent<Draggable>();
         if (draggable != null && draggableObjects.Contains(draggable))
         {
-            draggableObjects.Remove(draggable);
+            candidateRemoveDragable = draggable;
             Debug.Log("Draggable object removed from station.");
         }
 
         Tool tool = other.GetComponent<Tool>();
         if (tool != null && tools.Contains(tool))
         {
-            tools.Remove(tool);
+            candidateRemoveTool = tool;
             Debug.Log("Tool removed from station.");
         }
     }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    Draggable draggable = other.GetComponent<Draggable>();
+    //    if (draggable != null && !draggableObjects.Contains(draggable))
+    //    {
+    //        draggableObjects.Add(draggable);
+    //        Debug.Log("Draggable object placed on station.");
+    //    }
+
+    //    Tool tool = other.GetComponent<Tool>();
+    //    if (tool != null && !tools.Contains(tool))
+    //    {
+    //        tools.Add(tool);
+    //        Debug.Log("Tool placed on station.");
+    //    }
+    //    CheckForPossibleRecipieStart(Recipes);
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    Draggable draggable = other.GetComponent<Draggable>();
+    //    if (draggable != null && draggableObjects.Contains(draggable))
+    //    {
+    //        draggableObjects.Remove(draggable);
+    //        Debug.Log("Draggable object removed from station.");
+    //    }
+
+    //    Tool tool = other.GetComponent<Tool>();
+    //    if (tool != null && tools.Contains(tool))
+    //    {
+    //        tools.Remove(tool);
+    //        Debug.Log("Tool removed from station.");
+    //    }
+    //}
 }

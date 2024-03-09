@@ -13,6 +13,6 @@ public class CuttingStation : Station
 
     public override void StartRecipieMinigame()
     {
-        throw new System.NotImplementedException();
+        MiniGameManager.Instance.StartCuttingMiniGame();
     }
 }
