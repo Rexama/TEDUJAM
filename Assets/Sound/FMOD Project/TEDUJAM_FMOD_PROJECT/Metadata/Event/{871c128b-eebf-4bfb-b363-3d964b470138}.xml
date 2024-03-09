@@ -85,6 +85,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c5b7ecac-f372-48c6-a568-2da812ba971b}">
+		<property name="volume">
+			<value>-3.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{e7985b7a-f8eb-4680-baea-91c1022902e7}</destination>
 		</relationship>
@@ -197,17 +200,35 @@
 		<property name="filterTypeB">
 			<value>7</value>
 		</property>
+		<property name="filterTypeC">
+			<value>9</value>
+		</property>
+		<property name="filterTypeD">
+			<value>9</value>
+		</property>
 		<property name="frequencyA">
 			<value>20674.1602</value>
 		</property>
 		<property name="frequencyB">
 			<value>48.7475433</value>
 		</property>
+		<property name="frequencyC">
+			<value>379.118347</value>
+		</property>
+		<property name="frequencyD">
+			<value>8659.71094</value>
+		</property>
 		<property name="qualityA">
 			<value>0.486691207</value>
 		</property>
 		<property name="gainB">
 			<value>-27.2047672</value>
+		</property>
+		<property name="gainC">
+			<value>-5.88299179</value>
+		</property>
+		<property name="gainD">
+			<value>-6.40303421</value>
 		</property>
 	</object>
 	<object class="PannerEffect" id="{58e8d11d-0d14-4b39-996a-07f92e1fe1f8}">
