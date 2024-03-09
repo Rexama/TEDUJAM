@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db37f5bfacbd14942aa39959f52dc728, type: 3}
-  m_Name: Potion1
+  m_Name: Mixing1
   m_EditorClassIdentifier: 
   RequiredStation: 2
   RequiredTool: 1
-  Ingredients: 030000000400000004000000
-  EndProduct: {fileID: 7129781635941822466, guid: 85adfd66a1312374fb9f7e86f875bde6, type: 3}
+  Ingredients: 03000000
+  EndProduct: {fileID: 3491223558638776072, guid: b8e8bc74248eee64ab11251fd976e10c, type: 3}
