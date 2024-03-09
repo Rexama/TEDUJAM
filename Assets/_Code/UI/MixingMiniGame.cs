@@ -38,6 +38,10 @@ public class MixingMiniGame : MiniGamePanel
 
     public override void StartGame()
     {
+        degreesTurned = 0;
+        mixing = false;
+        started = false;
+        prevDir = Vector2.zero;
         StartCoroutine(WaitAndStart());
     }
 
@@ -49,11 +53,11 @@ public class MixingMiniGame : MiniGamePanel
     
     private void CheckMouse()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && IsInside())
         {
             mixing = true;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && mixing)
         {
             if (degreesTurned < degreesTarget)
             {
@@ -62,13 +66,25 @@ public class MixingMiniGame : MiniGamePanel
         }
     }
 
+    private float DistanceToCenter()
+    {
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(area, Input.mousePosition, null, out var rectPos);
+        var dist = rectPos.magnitude;
+        return dist;
+    }
+
+    private bool IsInside()
+    {
+        var dist = DistanceToCenter();
+        return dist > minDistance && dist < maxDistance;
+    }
+
     private void CheckArea()
     {
         if (mixing)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(area, Input.mousePosition, null, out var rectPos);
-            var dist = rectPos.magnitude;
-            if (dist < minDistance || dist > maxDistance)
+            if (!IsInside())
             {
                 LoseMiniGame();
             }
@@ -76,8 +92,11 @@ public class MixingMiniGame : MiniGamePanel
             {
                 WinMiniGame();
             }
-            var angle = Vector2.SignedAngle(prevDir, rectPos.normalized);
-            degreesTurned -= angle;
+            if (prevDir != Vector2.zero)
+            {
+                var angle = Vector2.SignedAngle(prevDir, rectPos.normalized);
+                degreesTurned -= angle;
+            }
             progressBar.SetValueWithoutNotify(Mathf.Clamp(degreesTurned, 0, float.MaxValue) / degreesTarget);
             prevDir = rectPos.normalized;
         }

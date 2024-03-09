@@ -26,11 +26,9 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 81,
-              "Column": 110,
-              "IsPinned": false,
-              "IsActive": true,
-              "IsSelected": true
+              "Line": 61,
+              "Column": 10,
+              "IsPinned": false
             },
             {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\CuttingStation.cs",
@@ -92,9 +90,11 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 4,
-              "Column": 1,
-              "IsPinned": false
+              "Line": 47,
+              "Column": 27,
+              "IsPinned": false,
+              "IsActive": true,
+              "IsSelected": true
             },
             {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\Tool.cs",
