@@ -15,11 +15,15 @@ public enum MischiefTypes
 }
 public class CatManager : MonoBehaviour
 {
-    [SerializeField]
     public GameManager GameManager;
+    public CatHand CatHandPrefab;
 
-    private int _mischiefPeriod = 10;
-    private int _restPeriod = 10;
+    public CatArea CatArea;
+
+
+    private int _disturbingPeriod = 10;
+    private int _inNestPeriod = 1;
+    private int _outNestPeriod = 10;
 
     public CatStates CurrentState;
 
@@ -32,23 +36,28 @@ public class CatManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(_restPeriod);
+            yield return new WaitForSeconds(_inNestPeriod);
 
             CurrentState = CatStates.InNest;
-
+            _startRandomMischief();
             Debug.Log("In Nest");
 
-            yield return new WaitForSeconds(_mischiefPeriod);
+            yield return new WaitForSeconds(_outNestPeriod);
 
             CurrentState = CatStates.OutNest;
             Debug.Log("Out Nest");
 
-            yield return new WaitForSeconds(_mischiefPeriod);
+            yield return new WaitForSeconds(_disturbingPeriod);
 
             CurrentState = CatStates.Disturbing;
             _startRandomMischief();
 
             Debug.Log("Disturbing");
+
+            yield return new WaitForSeconds(_outNestPeriod);
+
+            CurrentState = CatStates.OutNest;
+            Debug.Log("Out Nest");
         }
     }
 
@@ -60,6 +69,21 @@ public class CatManager : MonoBehaviour
 
         var selectedType = (MischiefTypes)enumValues.GetValue(randomIndex);
 
+        InvokeStealKnife();
+
+    }
+    private void InvokeStealKnife()
+    {
+        var catHand = Instantiate(CatHandPrefab);
+        catHand.Setup(GameManager.Instance.Knife, 3, _onHandArrive,_onSteal);
+    }
+    private void _onHandArrive(Draggable draggableObject)
+    {
+
+    }
+    private void _onSteal(Draggable draggableObject)
+    {
+        draggableObject.transform.position = CatArea.DropArea.transform.position;
     }
     private void _doMischief()
     {
