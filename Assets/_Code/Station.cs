@@ -13,7 +13,6 @@ public enum StationType
 public abstract class Station : MonoBehaviour
 {
     private List<Draggable> draggableObjects = new List<Draggable>();
-    private List<Tool> tools = new List<Tool>();
 
     public abstract List<Recipe> Recipes { get; }
     public abstract StationType StationType { get; }
@@ -39,11 +38,10 @@ public abstract class Station : MonoBehaviour
             throw new System.NotImplementedException("recipie is not for this station");
         }
 
-        if (recipe.RequiredTool != null && !tools.Any(x => x.ToolType == recipe.RequiredTool))
+        if (recipe.RequiredTool != null && !draggableObjects.Any(x => x is Tool && (x as Tool).ToolType== recipe.RequiredTool ))
         {
             return false;
         }
-
 
         foreach (IngredientType ingredientType in recipe.Ingredients)
         {
@@ -66,89 +64,22 @@ public abstract class Station : MonoBehaviour
         return true;
     }
 
-    private void OnMouseEnter()
+    public bool IsColliding(GameObject obj)
     {
-        Debug.Log("ASD");
+        Collider2D collider = obj.GetComponent<Collider2D>();
+        return collider != null && collider.IsTouching(GetComponent<Collider2D>());
     }
 
-    private void OnMouseExit()
+    public void AddToDraggables(Draggable obj)
     {
-        Debug.Log("EX");
-    }
-
-
-    private Draggable candidateAddDragable;
-    private Draggable candidateRemoveDragable;
-    private Tool candidateAddTool;
-    private Tool candidateRemoveTool;
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Draggable draggable = other.GetComponent<Draggable>();
-        if (draggable != null && !draggableObjects.Contains(draggable))
-        {
-            candidateAddDragable = draggable;
-            Debug.Log("Draggable object placed on station.");
-        }
-
-        Tool tool = other.GetComponent<Tool>();
-        if (tool != null && !tools.Contains(tool))
-        {
-            candidateAddTool = tool;
-            Debug.Log("Tool placed on station.");
-        }
+        draggableObjects.Add(obj);
+        Debug.Log(obj.name + " added to station.");
         CheckForPossibleRecipieStart(Recipes);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public void RemoveFromDraggables(Draggable obj)
     {
-        Draggable draggable = other.GetComponent<Draggable>();
-        if (draggable != null && draggableObjects.Contains(draggable))
-        {
-            candidateRemoveDragable = draggable;
-            Debug.Log("Draggable object removed from station.");
-        }
-
-        Tool tool = other.GetComponent<Tool>();
-        if (tool != null && tools.Contains(tool))
-        {
-            candidateRemoveTool = tool;
-            Debug.Log("Tool removed from station.");
-        }
+        draggableObjects.Remove(obj);
+        Debug.Log(obj.name + " added to station.");
     }
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    Draggable draggable = other.GetComponent<Draggable>();
-    //    if (draggable != null && !draggableObjects.Contains(draggable))
-    //    {
-    //        draggableObjects.Add(draggable);
-    //        Debug.Log("Draggable object placed on station.");
-    //    }
-
-    //    Tool tool = other.GetComponent<Tool>();
-    //    if (tool != null && !tools.Contains(tool))
-    //    {
-    //        tools.Add(tool);
-    //        Debug.Log("Tool placed on station.");
-    //    }
-    //    CheckForPossibleRecipieStart(Recipes);
-    //}
-
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    Draggable draggable = other.GetComponent<Draggable>();
-    //    if (draggable != null && draggableObjects.Contains(draggable))
-    //    {
-    //        draggableObjects.Remove(draggable);
-    //        Debug.Log("Draggable object removed from station.");
-    //    }
-
-    //    Tool tool = other.GetComponent<Tool>();
-    //    if (tool != null && tools.Contains(tool))
-    //    {
-    //        tools.Remove(tool);
-    //        Debug.Log("Tool removed from station.");
-    //    }
-    //}
 }
