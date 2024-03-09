@@ -54,7 +54,7 @@
 			<destination>{a691041c-22d7-4b5b-8788-e79eb3593d7e}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{70125391-8c87-4e16-b7c6-b20ccd5b2a6b}</destination>
+			<destination>{5a53be96-c4b4-468f-98a4-4705f5ee542a}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{be1c4ee0-cbd7-4cc6-ae35-ea2ec2d2c21f}" />
@@ -209,10 +209,10 @@
 			<value>4</value>
 		</property>
 		<property name="frequencyA">
-			<value>429.303101</value>
+			<value>1024.91663</value>
 		</property>
 		<property name="qualityA">
-			<value>0.591913342</value>
+			<value>0.697135448</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{26740a51-c5e5-470f-b319-761e96b63bff}" />

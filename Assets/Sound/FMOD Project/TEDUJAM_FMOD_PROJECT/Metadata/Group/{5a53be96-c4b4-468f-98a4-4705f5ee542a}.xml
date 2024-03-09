@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{5a53be96-c4b4-468f-98a4-4705f5ee542a}">
+		<property name="name">
+			<value>GameplayBus</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{f669aad5-7704-4861-b68e-cfec5f99bfff}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{682113c8-7b4a-4d91-bff8-de327a5e8b5d}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{70125391-8c87-4e16-b7c6-b20ccd5b2a6b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{f669aad5-7704-4861-b68e-cfec5f99bfff}">
+		<relationship name="effects">
+			<destination>{8bade074-a01f-4259-80e6-8fe69ff04cc1}</destination>
+			<destination>{3f30df93-ff4a-4714-b654-20bb81112180}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{682113c8-7b4a-4d91-bff8-de327a5e8b5d}" />
+	<object class="MixerBusFader" id="{8bade074-a01f-4259-80e6-8fe69ff04cc1}" />
+	<object class="SFXReverbEffect" id="{3f30df93-ff4a-4714-b654-20bb81112180}">
+		<property name="decayTime">
+			<value>500</value>
+		</property>
+		<property name="highCut">
+			<value>4600</value>
+		</property>
+		<property name="wetLevel">
+			<value>-16.5</value>
+		</property>
+	</object>
+</objects>
