@@ -7,7 +7,17 @@ public enum IngredientType
     SolidYellow,
     LiquidRed,
     LiquidBlue,
-    LiquidYellow
+    LiquidYellow,
+
+    SolidRedBlueCutted,
+    SolidRedYellowCutted,
+    SolidYellowBlueCutted,
+    SolidRedYellowBlueCutted,
+
+    SolidRedBlueCrushed,
+    SolidRedYellowCrushed,
+    SolidYellowBlueCrushed,
+    SolidRedYellowBlueCrushed,
 }
 
 public class Ingredient : Draggable

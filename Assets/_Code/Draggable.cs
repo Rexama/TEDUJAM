@@ -8,6 +8,11 @@ public class Draggable : MonoBehaviour
     private Station currentStation;
     private Station oldStation;
 
+    private void Start()
+    {
+        //gameObject.AddComponent<OrderLa>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Station newStation = other.GetComponent<Station>();
