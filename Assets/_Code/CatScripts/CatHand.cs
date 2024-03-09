@@ -21,8 +21,8 @@ public class CatHand : MonoBehaviour
     private float _timeToReach;
     private float _elapsedTime;
 
-    private System.Action<Draggable> _onHandArrive;
-    private System.Action<Draggable> _onPullBack;
+    private System.Action _onHandArrive;
+    private System.Action _onPullBack;
 
     private void _handleStates()
     {
@@ -41,6 +41,7 @@ public class CatHand : MonoBehaviour
             transform.position = targetPos;
             if (t >= 1.0f)
             {
+                _onPullBack.Invoke();
                 Destroy(gameObject);
             }
             
@@ -58,7 +59,7 @@ public class CatHand : MonoBehaviour
 
                 if (t >= 1f)
                 {
-                    _onHandArrive.Invoke(_targetObject);
+                    _onHandArrive.Invoke();
                     _firstPhase = false;
                     _elapsedTime = 0f;
 
@@ -71,7 +72,8 @@ public class CatHand : MonoBehaviour
                 _targetObject.transform.position = targetPos;
                 if (t >= 1.0f)
                 {
-                    _onPullBack.Invoke(_targetObject);
+                    _onPullBack.Invoke();
+                    _targetObject.transform.position = GameManager.Instance.CatManager.CatArea.DropArea.transform.position;
                     Destroy(gameObject);
                 }
 
@@ -84,17 +86,32 @@ public class CatHand : MonoBehaviour
         _handleStates();
     }
 
-    public void Setup(Draggable targetObject,int time,System.Action<Draggable> onHandArrive,System.Action<Draggable> onPullBack = null)
+    public void Setup(Draggable targetObject,int time,System.Action onHandArrive,System.Action onPullBack = null)
     {
-        _initialPosition = new Vector3(targetObject.transform.position.x,GameManager.Instance.ScreenTopEdgeY, targetObject.transform.position.z);
         _targetObject = targetObject;
         _targetPosition = targetObject.transform.position;
+        _initialPosition = _decideInitialPosition(_targetPosition);
         _elapsedTime = 0f;
         _timeToReach = time;
         _onHandArrive = onHandArrive;
         _onPullBack = onPullBack;
         _firstPhase=true;
 
+    }
+    private Vector3 _decideInitialPosition(Vector3 targetPos)
+    {
+        var bottom = GameManager.Instance.ScreenBottomEdgeY;
+        var top = GameManager.Instance.ScreenTopEdgeY;
+        int result;
+        if (targetPos.y < 0)
+        {
+            result = bottom;
+        }
+        else
+        {
+            result = top;
+        }
+        return new Vector3(targetPos.x, result, targetPos.z);
     }
     private void _startRetreat()
     {
@@ -106,7 +123,7 @@ public class CatHand : MonoBehaviour
     {
         if(_pause > 0 || _isRetreating) return;
 
-        if (_touchTime > 0)
+        if (_touchTime > 0 || !_firstPhase)
         {
             _startRetreat();
         }
