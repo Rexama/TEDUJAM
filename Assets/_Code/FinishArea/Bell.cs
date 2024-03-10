@@ -12,6 +12,7 @@ public class Bell : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        Debug.Log("pressed");
         OnBellPressed.Invoke();
     }
 }
