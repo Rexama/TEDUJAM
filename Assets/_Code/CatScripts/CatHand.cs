@@ -86,32 +86,17 @@ public class CatHand : MonoBehaviour
         _handleStates();
     }
 
-    public void Setup(Draggable targetObject,int time,System.Action onHandArrive,System.Action onPullBack = null)
+    public void Setup(Draggable targetObject,Vector3 initialPos,int time,System.Action onHandArrive,System.Action onPullBack = null)
     {
         _targetObject = targetObject;
         _targetPosition = targetObject.transform.position;
-        _initialPosition = _decideInitialPosition(_targetPosition);
+        _initialPosition = initialPos;
         _elapsedTime = 0f;
         _timeToReach = time;
         _onHandArrive = onHandArrive;
         _onPullBack = onPullBack;
         _firstPhase=true;
 
-    }
-    private Vector3 _decideInitialPosition(Vector3 targetPos)
-    {
-        var bottom = GameManager.Instance.ScreenBottomEdgeY;
-        var top = GameManager.Instance.ScreenTopEdgeY;
-        int result;
-        if (targetPos.y < 0)
-        {
-            result = bottom;
-        }
-        else
-        {
-            result = top;
-        }
-        return new Vector3(targetPos.x, result, targetPos.z);
     }
     private void _startRetreat()
     {

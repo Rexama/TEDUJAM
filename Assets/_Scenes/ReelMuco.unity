@@ -493,7 +493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 1942506907}
-  CatHandPrefab: {fileID: 5373507879121533462, guid: 6a5a9beb29497154cb2b3ed3c11d0783, type: 3}
+  CatHandPrefabUp: {fileID: 5373507879121533462, guid: 6e9d5444848c1724ebf172a6c182e352, type: 3}
+  CatHandPrefabDown: {fileID: 5373507879121533462, guid: 6a5a9beb29497154cb2b3ed3c11d0783, type: 3}
   CatHeadPrefab: {fileID: 187210363537543771, guid: cae04abd5f4e7a94ca902b331daa3571, type: 3}
   CatTailPrefab: {fileID: 2898162602314112944, guid: 50c19aa5d27c72d48a7ad759816650fd, type: 3}
   CatArea: {fileID: 1660665481}
