@@ -12,6 +12,8 @@ public class SoundManager : Singleton<SoundManager>
     public FMODUnity.EventReference MortarPestleEvent;
     public FMOD.Studio.EventInstance MortarPestleInstance;
 
+    FMOD.Studio.Bus masterBus;
+
 
 
     void Start()
@@ -19,23 +21,45 @@ public class SoundManager : Singleton<SoundManager>
         KnifeInstance = RuntimeManager.CreateInstance(KnifeEvent);
         PotStirInstance = RuntimeManager.CreateInstance(PotStirEvent);
         MortarPestleInstance = RuntimeManager.CreateInstance(MortarPestleEvent);
+        masterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Music/GameplayMusic");
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ambience/RoomTone");
     }
 
-    void Update()
-    {
-        // Example: play the sound when the user presses a key
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlaySound();
-        }
-    }
+    //void Update()
+    //{
+    //    // Example: play the sound when the user presses a key
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        DecreaseMasterVolume();
+    //    }
+    //}
 
-    void PlaySound()
+
+    int volumeState = 2;
+    void SoundButtonClicked()
     {
-        KnifeInstance.start();
+        if(volumeState == 1)
+        {
+            masterBus.setVolume(1f);
+            volumeState = 2;
+        }
+        else if(volumeState == 2)
+        {
+            masterBus.setVolume(0.75f);
+            volumeState = 3;
+        }
+        else if (volumeState == 3)
+        {
+            masterBus.setVolume(0.5f);
+            volumeState = 4;
+        }
+        else if (volumeState == 4)
+        {
+            masterBus.setVolume(0.25f);
+            volumeState = 1;
+        }
     }
 
     void OnDestroy()
