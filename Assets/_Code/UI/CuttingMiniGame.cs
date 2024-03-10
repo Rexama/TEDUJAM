@@ -41,7 +41,6 @@ public class CuttingMiniGame : MiniGamePanel
 
     public void OnCutButtonPressed()
     {
-        Debug.Log("AAAA");
         if (cutter.CollisionList.Count == 1)
         {
             cutter.CollisionList[0].transform.DOKill();
