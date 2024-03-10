@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Net.NetworkInformation;
 using UnityEngine;
 
@@ -6,15 +7,24 @@ public class Draggable : MonoBehaviour
     private bool isDragging = false;
     private Vector3 offset;
 
+    private Vector3 initialScale;
+
+    private void Start()
+    {
+        initialScale = transform.lossyScale;
+    }
+
     private void OnMouseDown()
     {
         offset = gameObject.transform.position - GetMouseWorldPosition();
         isDragging = true;
+        transform.DOScale(transform.lossyScale*1.1f,0.3f);
         _playGrabSound();
     }
 
     private void OnMouseUp()
     {
+        transform.DOScale(initialScale, 0.3f);
         isDragging = false;
     }
 
@@ -57,27 +67,35 @@ public class Draggable : MonoBehaviour
         }
     }
 
+
+
     private void _playGrabSound()
     {
         var ing = gameObject.GetComponent<Ingredient>();
         if (ing != null)
         {
-            if(ing.IngredientType == IngredientType.LiquidRed || ing.IngredientType == IngredientType.LiquidYellow || ing.IngredientType == IngredientType.LiquidBlue)
+            if (ing.IngredientType == IngredientType.LiquidRed || ing.IngredientType == IngredientType.LiquidYellow || ing.IngredientType == IngredientType.LiquidBlue)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabBottle");
             }
-            else if(ing.IngredientType == IngredientType.SolidTeeth)
+            else if (ing.IngredientType == IngredientType.SolidTeeth)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabCanineTeeth");
             }
-            else if(ing.IngredientType == IngredientType.SolidCyristal)
+            else if (ing.IngredientType == IngredientType.SolidCyristal)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabCrystal");
             }
-            else if(ing.IngredientType == IngredientType.SolidMushroom)
+            else if (ing.IngredientType == IngredientType.SolidMushroom)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabMushroom");
             }
+        }
+
+        var tool = gameObject.GetComponent<Tool>();
+        if (tool != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI/Click");
         }
     }
 }
