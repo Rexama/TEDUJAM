@@ -6,8 +6,6 @@ using UnityEngine;
 public class FinishArea : MonoBehaviour
 {
     public Bell Bell;
-    public DropArea DropArea;
-
     void Start()
     {
         Bell.OnBellPressed = _ringBell;
@@ -15,12 +13,6 @@ public class FinishArea : MonoBehaviour
 
     private void _ringBell()
     {
-        Debug.Log(DropArea.PotionsInside.Count);
-        if(DropArea.PotionsInside.Count == 1)
-        {
-            var finalPotion = DropArea.PotionsInside.First();
-
-            GameManager.Instance.PotionCraftedEnding(finalPotion);
-        }
+        GameManager.Instance.PotionCraftedEnding();
     }
 }
