@@ -5,14 +5,20 @@ using UnityEngine.EventSystems;
 
 public abstract class MiniGamePanel : UIBehaviour
 {
+    public bool isActive = false;
+
     public abstract void StartGame();
 
     public abstract Station Station { get; }
 
     public void OpenMiniGame()
     {
-        gameObject.SetActive(true);
-        StartGame();
+        if(!isActive)
+        {
+            gameObject.SetActive(true);
+            StartGame();
+            isActive = true;
+        }
     }
 
     public void WinMiniGame()

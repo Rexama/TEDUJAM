@@ -95,6 +95,7 @@ public class MixingMiniGame : MiniGamePanel
             }
             if (degreesTurned >= degreesTarget)
             {
+                SoundManager.Instance.PotStirInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 WinMiniGame();
             }
             if (prevDir != Vector2.zero)
