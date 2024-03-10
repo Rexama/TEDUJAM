@@ -21,12 +21,12 @@ public class GameManager : Singleton<GameManager>
 
     public void Start()
     {
-        
+        var x1 =1;
     }
-    public List<Ingredient> GetIngredient()
-    {
+    //public List<Ingredient> GetIngredient()
+    //{
 
-    }
+    //}
 
 
 
