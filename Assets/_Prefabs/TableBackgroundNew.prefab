@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6378316297673153519}
   m_Layer: 0
-  m_Name: TableBackground
+  m_Name: TableBackgroundNew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
