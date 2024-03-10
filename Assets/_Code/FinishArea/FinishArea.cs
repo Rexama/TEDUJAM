@@ -20,7 +20,7 @@ public class FinishArea : MonoBehaviour
         {
             var finalPotion = DropArea.PotionsInside.First();
 
-            GameManager.Instance.EndGame(finalPotion);
+            GameManager.Instance.PotionCraftedEnding(finalPotion);
         }
     }
 }

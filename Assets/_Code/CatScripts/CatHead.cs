@@ -67,6 +67,7 @@ public class CatHead : MonoBehaviour
     private void _hitEffect()
     {
         _spriteRenderer.DOColor(Color.red, 0.1f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/CatPaw");
         StartCoroutine(_revertColorAfterDelay());
     }
     private IEnumerator _revertColorAfterDelay()

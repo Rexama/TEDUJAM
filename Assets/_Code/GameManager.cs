@@ -19,16 +19,19 @@ public class GameManager : Singleton<GameManager>
     public int ScreenBottomEdgeY = -5;
 
 
-    public void Start()
-    {
-
-    }
     public List<Ingredient> GetIngredients()
     {
         Ingredient[] ingredientObjects = GameObject.FindObjectsOfType<Ingredient>();
         return new List<Ingredient>(ingredientObjects);
     }
-    public void EndGame(Potion potion)
+
+
+    //Endings
+    public void PotionCraftedEnding(Potion potion)
+    {
+
+    }    
+    public void TimeUpEnding()
     {
 
     }
