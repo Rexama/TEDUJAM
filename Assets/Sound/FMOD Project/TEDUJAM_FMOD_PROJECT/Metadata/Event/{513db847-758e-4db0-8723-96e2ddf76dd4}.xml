@@ -279,13 +279,13 @@
 			<value>7</value>
 		</property>
 		<property name="frequencyA">
-			<value>7647.40625</value>
+			<value>3203.24121</value>
 		</property>
 		<property name="frequencyB">
 			<value>76.8976746</value>
 		</property>
 		<property name="qualityA">
-			<value>0.50773567</value>
+			<value>0.697135448</value>
 		</property>
 		<property name="gainB">
 			<value>-9.00325012</value>
