@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Net.NetworkInformation;
 using UnityEngine;
 
@@ -6,15 +7,24 @@ public class Draggable : MonoBehaviour
     private bool isDragging = false;
     private Vector3 offset;
 
+    private Vector3 initialScale;
+
+    private void Start()
+    {
+        initialScale = transform.lossyScale;
+    }
+
     private void OnMouseDown()
     {
         offset = gameObject.transform.position - GetMouseWorldPosition();
         isDragging = true;
+        transform.DOScale(transform.lossyScale*1.1f,0.3f);
         _playGrabSound();
     }
 
     private void OnMouseUp()
     {
+        transform.DOScale(initialScale, 0.3f);
         isDragging = false;
     }
 
@@ -56,6 +66,8 @@ public class Draggable : MonoBehaviour
             renderer.enabled = false;
         }
     }
+
+
 
     private void _playGrabSound()
     {
