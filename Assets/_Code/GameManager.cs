@@ -1,5 +1,8 @@
+using MoreMountains.Tools;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -33,13 +36,19 @@ public class GameManager : Singleton<GameManager>
     {
         if (false)
         {
-
+            if (false)
+            {
+                SceneManager.LoadScene(1);// Bad Ending
+            }
+            else
+            {
+                SceneManager.LoadScene(2);// Good Ending
+            }
         }
-
     }    
     public void TimeUpEnding()
     {
-
+        SceneManager.LoadScene(1); // Bad Ending
     }
 
 }
