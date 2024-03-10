@@ -272,7 +272,7 @@ MonoBehaviour:
   CatHandPrefab: {fileID: 5373507879121533462, guid: 6a5a9beb29497154cb2b3ed3c11d0783, type: 3}
   CatHeadPrefab: {fileID: 187210363537543771, guid: cae04abd5f4e7a94ca902b331daa3571, type: 3}
   CatTailPrefab: {fileID: 2898162602314112944, guid: 50c19aa5d27c72d48a7ad759816650fd, type: 3}
-  CatArea: {fileID: 0}
+  CatArea: {fileID: 1660665481}
 --- !u!1 &194208209
 GameObject:
   m_ObjectHideFlags: 0
