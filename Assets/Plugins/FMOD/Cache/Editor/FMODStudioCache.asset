@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5008067743904719721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/CatPaw
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/CatPaw
+  Guid:
+    Data1: 706289570
+    Data2: 1083153327
+    Data3: -594186600
+    Data4: -194073971
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 292
+--- !u!114 &-4405763320003201098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/GameplayMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/GameplayMusic
+  Guid:
+    Data1: 400637139
+    Data2: 1168274965
+    Data3: -187950969
+    Data4: -1180281646
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 111626
+--- !u!114 &-3073380427396582541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/FMOD Project/TEDUJAM_FMOD_PROJECT/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638456607719909143
+  FileSizes:
+  - Name: Desktop
+    Value: 1022
+  Exists: 1
+--- !u!114 &-2216627053449667431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/FMOD Project/TEDUJAM_FMOD_PROJECT/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638456607719839330
+  FileSizes:
+  - Name: Desktop
+    Value: 1485152
+  Exists: 1
+--- !u!114 &-1292502660009530809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/PotStir
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/PotStir
+  Guid:
+    Data1: 1362999367
+    Data2: 1303410062
+    Data3: -493476985
+    Data4: -730990627
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2782
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3073380427396582541}
+  - {fileID: -2216627053449667431}
+  EditorEvents:
+  - {fileID: -1292502660009530809}
+  - {fileID: 5745952558751920542}
+  - {fileID: -5008067743904719721}
+  - {fileID: -4405763320003201098}
+  - {fileID: 8850115595865047006}
+  - {fileID: 8082066286695456208}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -2216627053449667431}
+  StringsBanks:
+  - {fileID: -3073380427396582541}
+  cacheTime: 638456607719909143
+  cacheVersion: 131616
+--- !u!114 &5745952558751920542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/CatMeow
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/CatMeow
+  Guid:
+    Data1: 584535442
+    Data2: 1215591170
+    Data3: -1602258285
+    Data4: -468007473
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1160
+--- !u!114 &8082066286695456208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/AddIngredientIntoPot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/AddIngredientIntoPot
+  Guid:
+    Data1: 1188280822
+    Data2: 1111914061
+    Data3: -18006096
+    Data4: 2082606170
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 825
+--- !u!114 &8850115595865047006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/BookPageTurn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/BookPageTurn
+  Guid:
+    Data1: 228016608
+    Data2: 1304198238
+    Data3: 1598177441
+    Data4: 1783295180
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 663
