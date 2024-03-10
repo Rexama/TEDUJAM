@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7829967213216915283}
   - component: {fileID: 5373507879121533462}
   m_Layer: 0
-  m_Name: CatHand
+  m_Name: CatHandUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: cfbf6d2df4a5cba4dbae3a8218087f05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f2aceced3e09a94aaa5c12b5ddc97bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.19047236, y: -1.2467265}
   m_SpriteTilingProperty:
-    border: {x: 1.5483334, y: 0.41840145, z: 4.188334, w: 0.07167833}
-    pivot: {x: 0.29219767, y: 0.2099487}
-    oldSize: {x: 8.333334, y: 5.000814}
+    border: {x: 2.2585714, y: 0, z: 1.8685713, w: 0}
+    pivot: {x: 0.613408, y: 0.7320797}
+    oldSize: {x: 7.142857, y: 4.286412}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1.6609445, y: 3.7734528}
   m_EdgeRadius: 0
 --- !u!114 &5373507879121533462
 MonoBehaviour:

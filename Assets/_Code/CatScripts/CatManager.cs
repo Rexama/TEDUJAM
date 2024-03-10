@@ -22,7 +22,8 @@ public class CatManager : MonoBehaviour
     public GameManager GameManager;
 
     //Prefabs
-    public CatHand CatHandPrefab;
+    public CatHand CatHandPrefabUp;
+    public CatHand CatHandPrefabDown;
     public CatHead CatHeadPrefab;
     public CatTail CatTailPrefab;
 
@@ -141,8 +142,9 @@ public class CatManager : MonoBehaviour
     private void _moveTailToNest()
     {
         var catTail = Instantiate(CatTailPrefab);
+        catTail.transform.DORotate(new Vector3(0, 180, 0), 0.1f);
         catTail.transform.position = new Vector2(_selectedTargetX, GameManager.ScreenTopEdgeY-2);
-        catTail.transform.DOMoveX(CatArea.transform.position.x -1, _outNestPeriod).SetEase(Ease.OutSine).OnComplete(() =>
+        catTail.transform.DOMoveX(CatArea.transform.position.x -2, _outNestPeriod).SetEase(Ease.OutSine).OnComplete(() =>
         {
             CurrentState = CatStates.InNest;
             Destroy(catTail.gameObject);
@@ -150,8 +152,33 @@ public class CatManager : MonoBehaviour
     }
     private void _stealObject(Draggable obj)
     {
-        var catHand = Instantiate(CatHandPrefab);
-        catHand.Setup(obj, 3, _onHandArrive,_onPullHandCompleted);
+        var initialPosition = _decideInitialPosition(obj.transform.position);
+        CatHand handPrefab;
+        if(initialPosition.y > 4.2)
+        {
+            handPrefab = CatHandPrefabDown;
+        }else
+        {
+            handPrefab = CatHandPrefabUp;
+        }
+        var catHand = Instantiate(handPrefab);
+        
+        catHand.Setup(obj,initialPosition, 3, _onHandArrive,_onPullHandCompleted);
+    }
+    private Vector3 _decideInitialPosition(Vector3 targetPos)
+    {
+        var bottom = GameManager.Instance.ScreenBottomEdgeY;
+        var top = GameManager.Instance.ScreenTopEdgeY;
+        int result;
+        if (targetPos.y < 0)
+        {
+            result = bottom;
+        }
+        else
+        {
+            result = top;
+        }
+        return new Vector3(targetPos.x, result, targetPos.z);
     }
     private void _getTopOfHead()
     {
