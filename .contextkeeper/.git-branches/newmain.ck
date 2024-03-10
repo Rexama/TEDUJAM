@@ -14,6 +14,40 @@
         {
           "Documents": [
             {
+              "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\UI\\CrushDrag.cs",
+              "RelativePath": "..\\..\\Assets\\_Code\\UI\\CrushDrag.cs",
+              "FullName": "CrushDrag.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 669
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 78,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\UI\\CrushingMiniGame.cs",
+              "RelativePath": "..\\..\\Assets\\_Code\\UI\\CrushingMiniGame.cs",
+              "FullName": "CrushingMiniGame.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 669
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 138,
+              "Column": 49,
+              "IsPinned": false,
+              "IsActive": true,
+              "IsSelected": true
+            },
+            {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\UI\\MixingMiniGame.cs",
               "RelativePath": "..\\..\\Assets\\_Code\\UI\\MixingMiniGame.cs",
               "FullName": "MixingMiniGame.cs",
@@ -25,8 +59,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 61,
-              "Column": 10,
+              "Line": 119,
+              "Column": 2,
               "IsPinned": false
             },
             {
@@ -105,11 +139,9 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 1,
-              "Column": 1,
-              "IsPinned": false,
-              "IsActive": true,
-              "IsSelected": true
+              "Line": 15,
+              "Column": 2,
+              "IsPinned": false
             },
             {
               "FilePath": "C:\\Develop\\TEDUJAM\\Assets\\_Code\\CrushingStation.cs",
@@ -123,8 +155,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 1,
-              "Column": 1,
+              "Line": 17,
+              "Column": 66,
               "IsPinned": false
             }
           ],

@@ -14,5 +14,5 @@ public class CrushingStation : Station
 
     public override StationType StationType => StationType.Crushing;
 
-    public override MiniGamePanel MiniGamePanel => throw new System.NotImplementedException();
+    public override MiniGamePanel MiniGamePanel => miniGamePanel;
 }

@@ -29,8 +29,12 @@ public class GameManager : Singleton<GameManager>
 
 
     //Endings
-    public void PotionCraftedEnding(Potion potion)
+    public void PotionCraftedEnding()
     {
+        if (false)
+        {
+
+        }
 
     }    
     public void TimeUpEnding()
