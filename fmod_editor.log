@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002414C4D1108 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002414C4D4348 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,6 +15,152 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FC348
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Water, Splash, Drop Stone Into Puddle SND30278 1', format=5, channels=1, frequency=48000, lengthbytes=9440, lengthpcm=41198, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.533423.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FC348
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Food & Drink, Ingredients, Soup, Can, Shake SND22129 1', format=5, channels=1, frequency=48000, lengthbytes=4704, lengthpcm=20719, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FC138
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Food & Drink, Tableware, Spoon, Stir, Cereal In Bowl 01 SND22040 1', format=5, channels=1, frequency=48000, lengthbytes=17568, lengthpcm=82858, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.372300.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FC138
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Water, Movement, Stir In Metal Pan 01 SND26794 1', format=5, channels=1, frequency=48000, lengthbytes=34752, lengthpcm=133539, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707946.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FD1B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='CatMeow1', format=5, channels=2, frequency=48000, lengthbytes=8960, lengthpcm=43633, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.093445.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FD1B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='CatMeow2', format=5, channels=2, frequency=48000, lengthbytes=9472, lengthpcm=42240, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.101440.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FD1B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='CatMeow3', format=5, channels=2, frequency=48000, lengthbytes=10784, lengthpcm=55725, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.106934.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1473088
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 12064
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C11FE4F318
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB588A3F70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB588A3F30
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB588A4050
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB588A4110
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000241478FD1B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='CatMeow4', format=5, channels=2, frequency=48000, lengthbytes=9696, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.150085.
+[LOG] SoundI::release                          :  (00000242B9D73368)
+[LOG] SoundI::release                          :     Water, Splash, Drop Stone Into Puddle SND30278 1 (00000242B9E6D718)
+[LOG] SoundI::release                          :  (00000242B9D734D8)
+[LOG] SoundI::release                          :     Food & Drink, Ingredients, Soup, Can, Shake SND22129 1 (00000242B9E6CD58)
+[LOG] SoundI::release                          :  (000002414BD18B18)
+[LOG] SoundI::release                          :     Water, Movement, Stir In Metal Pan 01 SND26794 1 (00000242B9E6BEB8)
+[LOG] SoundI::release                          :  (00000242B9D737B8)
+[LOG] SoundI::release                          :     Food & Drink, Tableware, Spoon, Stir, Cereal In Bowl 01 SND22040 1 (00000242B9E6BD18)
+[LOG] SoundI::release                          :  (000002414BD189A8)
+[LOG] SoundI::release                          :     CatMeow1 (00000242B9E6C1F8)
+[LOG] SoundI::release                          :  (000002414BD18C88)
+[LOG] SoundI::release                          :     CatMeow2 (00000242B9E6C878)
+[LOG] SoundI::release                          :  (000002414BD183E8)
+[LOG] SoundI::release                          :     CatMeow3 (00000242B9E6D098)
+[LOG] SoundI::release                          :  (000002414BD18DF8)
+[LOG] SoundI::release                          :     CatMeow4 (00000242B9E6D3D8)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
