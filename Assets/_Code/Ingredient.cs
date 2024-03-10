@@ -2,9 +2,9 @@ using UnityEngine;
 
 public enum IngredientType
 {
-    SolidRed,
-    SolidBlue,
-    SolidYellow,
+    SolidTeeth,
+    SolidMushroom,
+    SolidCyristal,
     LiquidRed,
     LiquidBlue,
     LiquidYellow,

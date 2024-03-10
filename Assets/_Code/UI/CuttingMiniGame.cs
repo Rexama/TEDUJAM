@@ -35,6 +35,7 @@ public class CuttingMiniGame : MiniGamePanel
 
     public override void StartGame()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/ChoppingBoardKnifeFriction");
         StartCoroutine(SpawnNodes());
     }
 

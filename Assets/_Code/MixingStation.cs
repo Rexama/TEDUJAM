@@ -80,6 +80,7 @@ public class MixingStation : Station
         {
             if (draggableObject is not Tool)
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/AddIngredientIntoPot");
                 draggableObject.DeactivateVisual();
             }
         }
