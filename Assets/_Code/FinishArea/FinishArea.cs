@@ -19,6 +19,8 @@ public class FinishArea : MonoBehaviour
         if(DropArea.PotionsInside.Count == 1)
         {
             var finalPotion = DropArea.PotionsInside.First();
+
+            GameManager.Instance.EndGame(finalPotion);
         }
     }
 }

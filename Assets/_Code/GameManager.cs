@@ -28,5 +28,9 @@ public class GameManager : Singleton<GameManager>
         Ingredient[] ingredientObjects = GameObject.FindObjectsOfType<Ingredient>();
         return new List<Ingredient>(ingredientObjects);
     }
+    public void EndGame(Potion potion)
+    {
+
+    }
 
 }
