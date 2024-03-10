@@ -1,8 +1,10 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MouseInput : MonoBehaviour
+public class MouseInput : Singleton<MouseInput>
 {
+    public int currentOrder = 5;
+
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))

@@ -39,7 +39,8 @@ public abstract class Station : MonoBehaviour
             Destroy(ing.gameObject);
         }
 
-        Instantiate(activeRecipe.EndProduct,transform.position, Quaternion.identity);
+        var craftedItem = Instantiate(activeRecipe.EndProduct,transform.position, Quaternion.identity);
+        craftedItem.transform.position = new Vector3(craftedItem.transform.position.x, craftedItem.transform.position.y, -3f);
     }
 
     public virtual void CheckForPossibleRecipieStart()
@@ -50,6 +51,7 @@ public abstract class Station : MonoBehaviour
             {
                 MiniGamePanel.OpenMiniGame();
                 activeRecipe = recipe;
+                break;
             }
         }
     }
