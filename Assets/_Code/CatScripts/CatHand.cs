@@ -125,10 +125,12 @@ public class CatHand : MonoBehaviour
 
         if (_touchTime > 0 || !_firstPhase)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/CatPaw");
             _startRetreat();
         }
         else
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/CatPaw");
             _pause = 2;
             _touchTime++;
         }        

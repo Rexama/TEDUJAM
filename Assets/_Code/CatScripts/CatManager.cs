@@ -28,8 +28,8 @@ public class CatManager : MonoBehaviour
 
     public CatArea CatArea;
 
-    private int _inNestPeriod = 5;
-    private int _outNestPeriod = 5;
+    private int _inNestPeriod = 10;
+    private int _outNestPeriod = 10;
 
 
     private CatStates _currentState;
@@ -39,6 +39,7 @@ public class CatManager : MonoBehaviour
         set
         {
             _currentState = value;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/CatMeow");
             _stateManage();            
         }
     }
@@ -59,25 +60,21 @@ public class CatManager : MonoBehaviour
         {
             CatArea.CatInNest(true);
             StartCoroutine(_startGoing());
-            Debug.Log("In Nest");
         }
         else if (CurrentState == CatStates.Going)
         {
             CatArea.CatInNest(false);
             _selectedTargetX = _selectMischief();
             _moveTailFromNest();
-            Debug.Log("Going");
 
         }
         else if (CurrentState == CatStates.Disturbing)
         {
             _startMischief();
-            Debug.Log("disturbing");
         }
         else if (CurrentState == CatStates.Returning)
         {
             _moveTailToNest();
-            Debug.Log("returning");
         }
         
     }
@@ -167,7 +164,7 @@ public class CatManager : MonoBehaviour
     }
     private void _onHandArrive()
     {
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/CatPaw");
     }
     private void _onPullHandCompleted()
     {
