@@ -31,4 +31,14 @@ public class Draggable : MonoBehaviour
         mousePoint.z = Camera.main.nearClipPlane;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
+
+    public void DeactivateVisual()
+    {
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.enabled = false;
+        }
+    }
 }
