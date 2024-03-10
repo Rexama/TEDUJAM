@@ -1,17 +1,16 @@
 using UnityEngine;
 using FMODUnity;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : Singleton<SoundManager>
 {
-    [FMODUnity.EventRef]
-    public string knfieSoundPath; // Set this in the inspector to the path of your FMOD event
+    public FMODUnity.EventReference KnifeEvent;
+    public FMOD.Studio.EventInstance KnifeInstance;
 
-    private FMOD.Studio.EventInstance soundEvent;
+
 
     void Start()
     {
-        // Create an instance of the FMOD event
-        soundEvent = RuntimeManager.CreateInstance(knfieSoundPath);
+        KnifeInstance = RuntimeManager.CreateInstance(KnifeEvent);
     }
 
     void Update()
@@ -25,13 +24,11 @@ public class SoundManager : MonoBehaviour
 
     void PlaySound()
     {
-        // Start playing the FMOD event
-        soundEvent.start();
+        KnifeInstance.start();
     }
 
     void OnDestroy()
     {
-        // Release the FMOD event instance when the object is destroyed
-        soundEvent.release();
+        KnifeInstance.release();
     }
 }

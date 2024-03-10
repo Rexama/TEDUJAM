@@ -45,6 +45,7 @@ public class CuttingMiniGame : MiniGamePanel
             cutter.CollisionList[0].transform.DOKill();
             Destroy(cutter.CollisionList[0]);
         }
+        SoundManager.Instance.KnifeInstance.start();
     }
 
     IEnumerator SpawnNodes()

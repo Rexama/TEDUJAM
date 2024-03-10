@@ -2057,7 +2057,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795577e3b8fb1674ba22eee71132a7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEventPath: event:/SFX/Gameplay/CutIngredient
+  KnifeEvent:
+    Guid:
+      Data1: -1511820781
+      Data2: 1241374466
+      Data3: 1315970488
+      Data4: -724760258
+    Path: event:/SFX/Gameplay/CutIngredient
 --- !u!114 &1942506909
 MonoBehaviour:
   m_ObjectHideFlags: 0
