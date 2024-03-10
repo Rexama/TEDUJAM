@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8149141613023643316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/MotarPestle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/MotarPestle
+  Guid:
+    Data1: -380891474
+    Data2: 1087909500
+    Data3: -955306111
+    Data4: 404653988
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2007
+--- !u!114 &-6302777462276503942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/CutIngredient
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/CutIngredient
+  Guid:
+    Data1: -1511820781
+    Data2: 1241374466
+    Data3: 1315970488
+    Data4: -724760258
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 359
+--- !u!114 &-6275090560382630837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabBottle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabBottle
+  Guid:
+    Data1: 460439011
+    Data2: 1160839057
+    Data3: -1994872164
+    Data4: -277666395
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 235
 --- !u!114 &-5008067743904719721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 111626
+--- !u!114 &-3385296877165345820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/RoomTone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/RoomTone
+  Guid:
+    Data1: -2028203381
+    Data2: 1274801855
+    Data3: -1774361677
+    Data4: 939607883
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 84816
 --- !u!114 &-3073380427396582541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +177,10 @@ MonoBehaviour:
   Path: Assets/Sound/FMOD Project/TEDUJAM_FMOD_PROJECT/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638456607719909143
+  lastModified: 638456643231942491
   FileSizes:
   - Name: Desktop
-    Value: 1022
+    Value: 1678
   Exists: 1
 --- !u!114 &-2216627053449667431
 MonoBehaviour:
@@ -89,10 +197,10 @@ MonoBehaviour:
   Path: Assets/Sound/FMOD Project/TEDUJAM_FMOD_PROJECT/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638456607719839330
+  lastModified: 638456643231927805
   FileSizes:
   - Name: Desktop
-    Value: 1485152
+    Value: 3231808
   Exists: 1
 --- !u!114 &-1292502660009530809
 MonoBehaviour:
@@ -116,11 +224,65 @@ MonoBehaviour:
   - {fileID: -2216627053449667431}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 2782
+--- !u!114 &-559945225750857087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Lose
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Lose
+  Guid:
+    Data1: -1179145351
+    Data2: 1339843782
+    Data3: -385056875
+    Data4: -1693112913
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4625
+--- !u!114 &-506692167624604557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabMushroom
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabMushroom
+  Guid:
+    Data1: -340344559
+    Data2: 1145963319
+    Data3: 1688214174
+    Data4: -523610892
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 379
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,13 +305,80 @@ MonoBehaviour:
   - {fileID: -4405763320003201098}
   - {fileID: 8850115595865047006}
   - {fileID: 8082066286695456208}
+  - {fileID: 8294214559507759667}
+  - {fileID: -506692167624604557}
+  - {fileID: -6302777462276503942}
+  - {fileID: 3194029937183959854}
+  - {fileID: 6650121800994157358}
+  - {fileID: -559945225750857087}
+  - {fileID: -3385296877165345820}
+  - {fileID: 8119794963569486045}
+  - {fileID: -8149141613023643316}
+  - {fileID: 1750068959878708470}
+  - {fileID: 8718651520943585479}
+  - {fileID: -6275090560382630837}
+  - {fileID: 5912122259022593120}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2216627053449667431}
   StringsBanks:
   - {fileID: -3073380427396582541}
-  cacheTime: 638456607719909143
+  cacheTime: 638456643231942491
   cacheVersion: 131616
+--- !u!114 &1750068959878708470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabEmptyBottle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabEmptyBottle
+  Guid:
+    Data1: 97534405
+    Data2: 1130621565
+    Data3: -1446057312
+    Data4: -2008321456
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70
+--- !u!114 &3194029937183959854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabChoppingBoard
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabChoppingBoard
+  Guid:
+    Data1: -377077735
+    Data2: 1196787609
+    Data3: 1171719818
+    Data4: -687628275
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 429
 --- !u!114 &5745952558751920542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +406,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1160
+--- !u!114 &5912122259022593120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/ChoppingBoardKnifeFriction
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/ChoppingBoardKnifeFriction
+  Guid:
+    Data1: 314835188
+    Data2: 1278331389
+    Data3: 380172702
+    Data4: -744738685
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 341
+--- !u!114 &6650121800994157358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Click
+  Guid:
+    Data1: -425607141
+    Data2: 1323637308
+    Data3: -2010744659
+    Data4: 1660095183
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 158
 --- !u!114 &8082066286695456208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +487,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 825
+--- !u!114 &8119794963569486045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabCrystal
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabCrystal
+  Guid:
+    Data1: -541304420
+    Data2: 1087665097
+    Data3: 1713521045
+    Data4: 1364527267
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 140
+--- !u!114 &8294214559507759667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabCanineTeeth
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabCanineTeeth
+  Guid:
+    Data1: 634035217
+    Data2: 1152602875
+    Data3: -837041521
+    Data4: -2018295403
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 198
+--- !u!114 &8718651520943585479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gameplay/GrabMotar
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gameplay/GrabMotar
+  Guid:
+    Data1: 1879835613
+    Data2: 1081530076
+    Data3: 81747378
+    Data4: -2065930143
+  Banks:
+  - {fileID: -2216627053449667431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 293
 --- !u!114 &8850115595865047006
 MonoBehaviour:
   m_ObjectHideFlags: 0
