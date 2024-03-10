@@ -21,21 +21,12 @@ public class GameManager : Singleton<GameManager>
 
     public void Start()
     {
-        var x1 =1;
-    }
-<<<<<<< Updated upstream
-    //public List<Ingredient> GetIngredient()
-    //{
 
-    //}
-=======
+    }
     public List<Ingredient> GetIngredients()
     {
         Ingredient[] ingredientObjects = GameObject.FindObjectsOfType<Ingredient>();
         return new List<Ingredient>(ingredientObjects);
     }
->>>>>>> Stashed changes
-
-
 
 }
