@@ -150,7 +150,7 @@ MonoBehaviour:
   Path: Assets/Sound/FMOD Project/TEDUJAM_FMOD_PROJECT/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638456696954969400
+  lastModified: 638456696903405090
   FileSizes:
   - Name: Desktop
     Value: 3231808
@@ -330,7 +330,7 @@ MonoBehaviour:
   - {fileID: -5191989106994999274}
   StringsBanks:
   - {fileID: 1645397387205338813}
-  cacheTime: 638456696954999041
+  cacheTime: 638456696903405090
   cacheVersion: 131616
 --- !u!114 &1006393839485731097
 MonoBehaviour:
@@ -428,7 +428,7 @@ MonoBehaviour:
   Path: Assets/Sound/FMOD Project/TEDUJAM_FMOD_PROJECT/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638456696954999041
+  lastModified: 638456696903405090
   FileSizes:
   - Name: Desktop
     Value: 1678
