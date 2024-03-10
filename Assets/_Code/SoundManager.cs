@@ -8,11 +8,11 @@ public class SoundManager : Singleton<SoundManager>
 
 
 
-
-
     void Start()
     {
         KnifeInstance = RuntimeManager.CreateInstance(KnifeEvent);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music/GameplayMusic");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ambience/RoomTone");
     }
 
     void Update()

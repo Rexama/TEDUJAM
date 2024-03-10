@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
@@ -9,6 +10,7 @@ public class Draggable : MonoBehaviour
     {
         offset = gameObject.transform.position - GetMouseWorldPosition();
         isDragging = true;
+        _playGrabSound();
     }
 
     private void OnMouseUp()
@@ -55,4 +57,27 @@ public class Draggable : MonoBehaviour
         }
     }
 
+    private void _playGrabSound()
+    {
+        var ing = gameObject.GetComponent<Ingredient>();
+        if (ing != null)
+        {
+            if(ing.IngredientType == IngredientType.LiquidRed || ing.IngredientType == IngredientType.LiquidYellow || ing.IngredientType == IngredientType.LiquidBlue)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabBottle");
+            }
+            else if(ing.IngredientType == IngredientType.SolidTeeth)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabCanineTeeth");
+            }
+            else if(ing.IngredientType == IngredientType.SolidCyristal)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabCrystal");
+            }
+            else if(ing.IngredientType == IngredientType.SolidMushroom)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabMushroom");
+            }
+        }
+    }
 }
