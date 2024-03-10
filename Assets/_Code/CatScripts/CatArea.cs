@@ -4,15 +4,12 @@ public class CatArea : MonoBehaviour
 {
     public GameObject CatNest;
     public GameObject DropArea;
+    public CatBody CatBody;
 
-    void Start()
+    
+    public void CatInNest(bool inNest)
     {
-        
+        CatBody.gameObject.SetActive(inNest);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
