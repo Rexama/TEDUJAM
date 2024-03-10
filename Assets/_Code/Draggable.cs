@@ -74,22 +74,28 @@ public class Draggable : MonoBehaviour
         var ing = gameObject.GetComponent<Ingredient>();
         if (ing != null)
         {
-            if(ing.IngredientType == IngredientType.LiquidRed || ing.IngredientType == IngredientType.LiquidYellow || ing.IngredientType == IngredientType.LiquidBlue)
+            if (ing.IngredientType == IngredientType.LiquidRed || ing.IngredientType == IngredientType.LiquidYellow || ing.IngredientType == IngredientType.LiquidBlue)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabBottle");
             }
-            else if(ing.IngredientType == IngredientType.SolidTeeth)
+            else if (ing.IngredientType == IngredientType.SolidTeeth)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabCanineTeeth");
             }
-            else if(ing.IngredientType == IngredientType.SolidCyristal)
+            else if (ing.IngredientType == IngredientType.SolidCyristal)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabCrystal");
             }
-            else if(ing.IngredientType == IngredientType.SolidMushroom)
+            else if (ing.IngredientType == IngredientType.SolidMushroom)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Gameplay/GrabMushroom");
             }
+        }
+
+        var tool = gameObject.GetComponent<Tool>();
+        if (tool != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI/Click");
         }
     }
 }
