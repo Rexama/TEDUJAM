@@ -4,14 +4,14 @@ using FMODUnity;
 public class SoundManager : MonoBehaviour
 {
     [FMODUnity.EventRef]
-    public string fmodEventPath; // Set this in the inspector to the path of your FMOD event
+    public string knfieSoundPath; // Set this in the inspector to the path of your FMOD event
 
     private FMOD.Studio.EventInstance soundEvent;
 
     void Start()
     {
         // Create an instance of the FMOD event
-        soundEvent = RuntimeManager.CreateInstance(fmodEventPath);
+        soundEvent = RuntimeManager.CreateInstance(knfieSoundPath);
     }
 
     void Update()

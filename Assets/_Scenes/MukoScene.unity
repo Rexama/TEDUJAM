@@ -1789,8 +1789,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1730445909}
   - component: {fileID: 1730445908}
-  - component: {fileID: 1730445907}
   - component: {fileID: 1730445910}
+  - component: {fileID: 1730445911}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1798,14 +1798,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1730445907
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730445906}
-  m_Enabled: 1
 --- !u!20 &1730445908
 Camera:
   m_ObjectHideFlags: 0
@@ -1888,6 +1880,19 @@ MonoBehaviour:
   edgeThickness: 100
   minXLimit: -20
   maxXLimit: 20
+--- !u!114 &1730445911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730445906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &1761139494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2052,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795577e3b8fb1674ba22eee71132a7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEventPath: 
+  fmodEventPath: event:/SFX/Gameplay/CutIngredient
 --- !u!114 &1942506909
 MonoBehaviour:
   m_ObjectHideFlags: 0
