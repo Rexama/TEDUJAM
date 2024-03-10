@@ -219,8 +219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782271cea6ac0ca4ab7d4ce207ed117a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CuttingMiniGamePanel: {fileID: 0}
   recipes:
   - {fileID: 11400000, guid: 6156cc6d8f0e98d4183243e4e32f7f4c, type: 2}
+  - {fileID: 11400000, guid: 718afe09088a3ce449ab898a14c9be6b, type: 2}
+  - {fileID: 11400000, guid: 8d7a5894ac9e37b4598dfa51440fe139, type: 2}
 --- !u!212 &1984791086501493704
 SpriteRenderer:
   m_ObjectHideFlags: 0

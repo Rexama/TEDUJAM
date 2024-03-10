@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d3a5e0ce-11d4-47b9-a0eb-7c8ad87689e5}">
+		<property name="assetPath">
+			<value>Fire, Burning, Wood Stove, Crackling SND11235.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.608437500000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{835fcb68-19eb-4841-a543-c40dad28523e}</destination>
+		</relationship>
+	</object>
+</objects>

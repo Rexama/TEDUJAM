@@ -15,4 +15,9 @@ public class Cutter : MonoBehaviour
     {
         CollisionList.Remove(other.gameObject);
     }
+
+    private void OnDisable()
+    {
+        CollisionList.Clear();
+    }
 }

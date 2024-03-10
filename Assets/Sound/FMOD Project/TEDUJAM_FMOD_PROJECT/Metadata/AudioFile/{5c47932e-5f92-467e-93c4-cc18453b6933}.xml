@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5c47932e-5f92-467e-93c4-cc18453b6933}">
+		<property name="assetPath">
+			<value>Food &amp; Drink, Ingredients, Soup, Can, Shake SND22129.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.24190624999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{835fcb68-19eb-4841-a543-c40dad28523e}</destination>
+		</relationship>
+	</object>
+</objects>

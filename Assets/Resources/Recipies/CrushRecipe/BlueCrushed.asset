@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db37f5bfacbd14942aa39959f52dc728, type: 3}
+  m_Name: BlueCrushed
+  m_EditorClassIdentifier: 
+  RequiredStation: 1
+  RequiredTool: 2
+  Ingredients: 01000000
+  EndProduct: {fileID: 8021236246440639526, guid: d65939cf1f71d8244a1c29a10c9531cf, type: 3}

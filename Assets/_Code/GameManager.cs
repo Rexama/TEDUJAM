@@ -1,51 +1,32 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
+    public List<Ingredient> IngredientList;
 
     public Station CuttingStation;
     public Station MixingStation;
     public Station CrushingStation;
+    public CatManager CatManager;
+
 
     public Tool Knife;
     public Tool Spoon;
     public Tool Crusher;
 
-    private static GameManager _instance;
+    public int ScreenTopEdgeY = 5 ;
+    public int ScreenBottomEdgeY = -5;
 
-    public static GameManager Instance
+
+    public void Start()
     {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<GameManager>();
 
-                if (_instance == null)
-                {
-                    GameObject singletonObject = new GameObject(typeof(GameManager).Name);
-                    _instance = singletonObject.AddComponent<GameManager>();
-                    DontDestroyOnLoad(singletonObject);
-                }
-            }
-
-            return _instance;
-        }
     }
-
-    private void Awake()
+    public List<Ingredient> GetIngredients()
     {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        Ingredient[] ingredientObjects = GameObject.FindObjectsOfType<Ingredient>();
+        return new List<Ingredient>(ingredientObjects);
     }
-
-
 
 }

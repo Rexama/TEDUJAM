@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b8ba2ef5-6d51-4abc-bf4a-58d39354d3b8}">
+		<property name="assetPath">
+			<value>Wood, Handle, Wooden Door Frame, Grab, Tap, Hit With Hand, Varying Force, Off Axis 32 SND88806.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>192</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.0982499999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{835fcb68-19eb-4841-a543-c40dad28523e}</destination>
+		</relationship>
+	</object>
+</objects>

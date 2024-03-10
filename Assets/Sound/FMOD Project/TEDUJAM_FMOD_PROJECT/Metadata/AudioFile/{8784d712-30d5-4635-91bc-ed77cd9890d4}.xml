@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8784d712-30d5-4635-91bc-ed77cd9890d4}">
+		<property name="assetPath">
+			<value>Water, Movement, Stir In Metal Pan 01 SND26794.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7820624999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{835fcb68-19eb-4841-a543-c40dad28523e}</destination>
+		</relationship>
+	</object>
+</objects>
