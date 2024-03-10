@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &48270569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2747801711961274390, guid: b27bf1166c58fb9478e0ac6b719e6034, type: 3}
+  m_PrefabInstance: {fileID: 7015037239603371299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782271cea6ac0ca4ab7d4ce207ed117a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &119299635
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 1942506907}
   CatHandPrefab: {fileID: 5373507879121533462, guid: 6a5a9beb29497154cb2b3ed3c11d0783, type: 3}
+  CatHeadPrefab: {fileID: 187210363537543771, guid: cae04abd5f4e7a94ca902b331daa3571, type: 3}
   CatArea: {fileID: 1278855065}
   CurrentState: 0
 --- !u!114 &550584312 stripped
@@ -396,6 +408,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728763922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8226815870925390569, guid: 105f57bf8c5e17d4b85e760d4231108d, type: 3}
+  m_PrefabInstance: {fileID: 5576804826899255827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0610e6118582939458084c4693251d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1730445906
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +528,17 @@ MonoBehaviour:
   edgeThickness: 100
   minXLimit: -20
   maxXLimit: 20
+--- !u!114 &1824838664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6140080271269291505, guid: 00a8ab5e4dfbf3c4b848305b408acab3, type: 3}
+  m_PrefabInstance: {fileID: 2438936795552155327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1defb6b91265e4fa3cfb5ff699241d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1942506905
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,14 +584,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8da73a43414d54f85cb7acf07ffc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CuttingStation: {fileID: 48270569}
+  MixingStation: {fileID: 1728763922}
+  CrushingStation: {fileID: 1824838664}
   CatManager: {fileID: 119299637}
-  CuttingStation: {fileID: 0}
-  MixingStation: {fileID: 0}
-  CrushingStation: {fileID: 0}
   Knife: {fileID: 1949763540}
   Spoon: {fileID: 550584312}
   Crusher: {fileID: 0}
   ScreenTopEdgeY: 5
+  ScreenBottomEdgeY: -5
 --- !u!114 &1949763540 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6501217341413863887, guid: ed3208f099515054fa5a82f6abd59f92, type: 3}

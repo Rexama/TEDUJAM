@@ -17,11 +17,12 @@ public class CatManager : MonoBehaviour
 {
     public GameManager GameManager;
     public CatHand CatHandPrefab;
+    public CatHead CatHeadPrefab;
 
     public CatArea CatArea;
 
 
-    private int _disturbingPeriod = 10;
+    private int _disturbingPeriod = 15;
     private int _inNestPeriod = 1;
     private int _outNestPeriod = 10;
 
@@ -69,21 +70,32 @@ public class CatManager : MonoBehaviour
 
         var selectedType = (MischiefTypes)enumValues.GetValue(randomIndex);
 
-        InvokeStealKnife();
+        _stealKnife();
+        _getTopOfWitch();
 
     }
-    private void InvokeStealKnife()
+
+    private void _stealKnife()
     {
         var catHand = Instantiate(CatHandPrefab);
-        catHand.Setup(GameManager.Instance.Knife, 3, _onHandArrive,_onSteal);
+        catHand.Setup(GameManager.Instance.Knife, 3, _onHandArrive,_onPullHandCompleted);
     }
-    private void _onHandArrive(Draggable draggableObject)
+    private void _getTopOfWitch()
+    {
+        var catHand = Instantiate(CatHeadPrefab);
+        catHand.Setup(_onHeadGiveUp);
+    }
+    private void _onHeadGiveUp()
     {
 
     }
-    private void _onSteal(Draggable draggableObject)
+    private void _onHandArrive()
     {
-        draggableObject.transform.position = CatArea.DropArea.transform.position;
+
+    }
+    private void _onPullHandCompleted()
+    {
+
     }
     private void _doMischief()
     {
