@@ -72,7 +72,7 @@ public class MixingStation : Station
 
     public virtual void CheckForPossibleRecipieStart()
     {
-        if (draggableObjects.Any(x => x is Tool && (x as Tool).ToolType == ToolType.Spoon))
+        if (draggableObjects.Any(x => x is Tool && (x as Tool).ToolType == ToolType.Spoon) && draggableObjects.Count>=2)
         {
             MiniGamePanel.OpenMiniGame();
         }
