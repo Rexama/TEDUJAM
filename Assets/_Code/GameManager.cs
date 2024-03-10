@@ -18,6 +18,8 @@ public class GameManager : Singleton<GameManager>
     public int ScreenTopEdgeY = 5 ;
     public int ScreenBottomEdgeY = -5;
 
+    public PotionType EndPotionType;
+
 
     public List<Ingredient> GetIngredients()
     {

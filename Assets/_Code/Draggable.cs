@@ -8,10 +8,12 @@ public class Draggable : MonoBehaviour
     private Vector3 offset;
 
     private Vector3 initialScale;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         initialScale = transform.lossyScale;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnMouseDown()
@@ -19,6 +21,8 @@ public class Draggable : MonoBehaviour
         offset = gameObject.transform.position - GetMouseWorldPosition();
         isDragging = true;
         transform.DOScale(transform.lossyScale*1.1f,0.3f);
+        spriteRenderer.sortingOrder = MouseInput.Instance.currentOrder;
+        MouseInput.Instance.currentOrder++;
         _playGrabSound();
     }
 

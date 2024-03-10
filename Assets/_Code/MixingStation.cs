@@ -14,13 +14,11 @@ public class MixingStation : Station
     [SerializeField]
     public GameObject defPotion;
 
-
     public override List<Recipe> Recipes => recipes;
 
     public override StationType StationType => StationType.Mixing;
 
     public override MiniGamePanel MiniGamePanel => MixingMiniGamePanel;
-
 
     public virtual void ProduceRecipe()
     {
@@ -56,14 +54,17 @@ public class MixingStation : Station
             }
         }
 
-        if (activeRecipe != null && flag)
-        {
-            Instantiate(activeRecipe.EndProduct, transform.position, Quaternion.identity);
-        }
-        else
-        {
-            Instantiate(defPotion, transform.position, Quaternion.identity);
-        }
+        //if (activeRecipe != null && flag)
+        //{
+        //    Instantiate(activeRecipe.EndProduct, transform.position, Quaternion.identity);
+        //}
+        //else
+        //{
+        //    Instantiate(defPotion, transform.position, Quaternion.identity);
+        //}
+
+        GameManager.Instance.EndPotionType = activeRecipe.EndProduct.GetComponent<Potion>().Type;
+        Debug.Log(activeRecipe.EndProduct.GetComponent<Potion>().Type);
 
         draggableObjects.Clear();
         activeRecipe = null;

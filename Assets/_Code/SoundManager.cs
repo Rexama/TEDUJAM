@@ -25,6 +25,7 @@ public class SoundManager : Singleton<SoundManager>
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Music/GameplayMusic");
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ambience/RoomTone");
+        masterBus.setVolume(0.75f);
     }
 
     //void Update()
@@ -42,22 +43,22 @@ public class SoundManager : Singleton<SoundManager>
     {
         if(volumeState == 1)
         {
-            masterBus.setVolume(1f);
+            masterBus.setVolume(0.75f);
             volumeState = 2;
         }
         else if(volumeState == 2)
         {
-            masterBus.setVolume(0.75f);
+            masterBus.setVolume(0.5f);
             volumeState = 3;
         }
         else if (volumeState == 3)
         {
-            masterBus.setVolume(0.5f);
+            masterBus.setVolume(0.25f);
             volumeState = 4;
         }
         else if (volumeState == 4)
         {
-            masterBus.setVolume(0.25f);
+            masterBus.setVolume(0.0f);
             volumeState = 1;
         }
     }
