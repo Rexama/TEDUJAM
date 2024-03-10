@@ -55,7 +55,7 @@ public class CatHead : MonoBehaviour
         }
         else if( _clickNumber == 5)
         {
-            transform.DOMoveY(_initialPosition.y, _timeToRetreat)
+            transform.DOMoveY(_initialPosition.y+2, _timeToRetreat)
                 .SetEase(Ease.OutQuint)
                     .OnComplete(() =>
                         {

@@ -1245,7 +1245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bell: {fileID: 1597369951}
-  DropArea: {fileID: 0}
 --- !u!4 &366779893
 Transform:
   m_ObjectHideFlags: 0
@@ -4065,11 +4064,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975750005489480468, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.05
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 5975750005489480468, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.25
+      value: -2.18
       objectReference: {fileID: 0}
     - target: {fileID: 5975750005489480468, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4102,6 +4101,18 @@ PrefabInstance:
     - target: {fileID: 5975750005489480468, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567527945316120381, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567527945316120381, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567527945316120381, guid: 8321a08b1c7c96b4ebd251a8132e222d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
