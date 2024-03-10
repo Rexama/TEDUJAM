@@ -73,7 +73,7 @@ public class CatHand : MonoBehaviour
                 if (t >= 1.0f)
                 {
                     _onPullBack.Invoke();
-                    _targetObject.transform.position = GameManager.Instance.CatManager.CatArea.DropArea.transform.position;
+                    GameManager.Instance.CatManager.CatArea.PutObjectCatArea(_targetObject);
                     Destroy(gameObject);
                 }
 

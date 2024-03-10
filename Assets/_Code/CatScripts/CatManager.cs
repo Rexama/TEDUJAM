@@ -28,10 +28,8 @@ public class CatManager : MonoBehaviour
 
     public CatArea CatArea;
 
-
-    private int _disturbingPeriod = 5;
     private int _inNestPeriod = 5;
-    private int _outNestPeriod = 3;
+    private int _outNestPeriod = 5;
 
 
     private CatStates _currentState;
