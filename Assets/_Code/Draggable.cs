@@ -41,4 +41,18 @@ public class Draggable : MonoBehaviour
             spriteRenderer.enabled = false;
         }
     }
+
+    public void CloseSpriteRenderers(Transform parentTransform)
+    {
+        SpriteRenderer[] spriteRenderers = parentTransform.GetComponentsInChildren<SpriteRenderer>(true);
+        var its = gameObject.GetComponent<SpriteRenderer>();
+        if(its != null)
+            its.enabled = false;
+
+        foreach (SpriteRenderer renderer in spriteRenderers)
+        {
+            renderer.enabled = false;
+        }
+    }
+
 }

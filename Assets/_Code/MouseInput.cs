@@ -16,7 +16,14 @@ public class MouseInput : MonoBehaviour
                 Station station;
                 if (hit.collider.gameObject.TryGetComponent(out station)) 
                 {
-                    station.CheckForPossibleRecipieStart();
+                    if(station is MixingStation)
+                    {
+                        (station as MixingStation).CheckForPossibleRecipieStart();
+                    }
+                    else
+                    {
+                        station.CheckForPossibleRecipieStart();
+                    }
                 };
             }
         }

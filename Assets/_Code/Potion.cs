@@ -8,7 +8,7 @@ public enum PotionType
     PotionType2,
     PotionType3,
     PotionType4,
-    PotionType5,
+    PotionBad
 }
 
 public class Potion : Draggable

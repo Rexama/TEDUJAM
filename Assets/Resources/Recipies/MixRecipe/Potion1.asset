@@ -15,4 +15,4 @@ MonoBehaviour:
   RequiredStation: 2
   RequiredTool: 1
   Ingredients: 03000000
-  EndProduct: {fileID: 3491223558638776072, guid: b8e8bc74248eee64ab11251fd976e10c, type: 3}
+  EndProduct: {fileID: 7129781635941822466, guid: 85adfd66a1312374fb9f7e86f875bde6, type: 3}

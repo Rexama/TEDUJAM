@@ -12,14 +12,14 @@ public enum StationType
 
 public abstract class Station : MonoBehaviour
 {
-    private List<Draggable> draggableObjects = new List<Draggable>();
+    protected List<Draggable> draggableObjects = new List<Draggable>();
     public abstract List<Recipe> Recipes { get; }
     public abstract StationType StationType { get; }
     public abstract MiniGamePanel MiniGamePanel { get; }
 
 
-    private Recipe activeRecipe;
-    public void ProduceRecipe()
+    protected Recipe activeRecipe;
+    public virtual void ProduceRecipe()
     {
         var recipeIngredients = new List<IngredientType>(activeRecipe.Ingredients);
 
@@ -42,7 +42,7 @@ public abstract class Station : MonoBehaviour
         Instantiate(activeRecipe.EndProduct,transform.position, Quaternion.identity);
     }
 
-    public void CheckForPossibleRecipieStart()
+    public virtual void CheckForPossibleRecipieStart()
     {
         foreach (var recipe in Recipes)
         {
@@ -54,7 +54,7 @@ public abstract class Station : MonoBehaviour
         }
     }
 
-    private bool CanRecipeStart(Recipe recipe)
+    public virtual bool CanRecipeStart(Recipe recipe)
     {
         if (recipe.RequiredStation != null && recipe.RequiredStation != StationType)
         {

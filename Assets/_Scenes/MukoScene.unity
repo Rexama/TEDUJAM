@@ -2703,6 +2703,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226815870925390569, guid: 105f57bf8c5e17d4b85e760d4231108d, type: 3}
+      propertyPath: defPotion
+      value: 
+      objectReference: {fileID: 7129781635941822466, guid: 85adfd66a1312374fb9f7e86f875bde6, type: 3}
+    - target: {fileID: 8226815870925390569, guid: 105f57bf8c5e17d4b85e760d4231108d, type: 3}
       propertyPath: MixingMiniGamePanel
       value: 
       objectReference: {fileID: 906333049}

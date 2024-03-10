@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 
 public abstract class MiniGamePanel : UIBehaviour
@@ -16,7 +17,14 @@ public abstract class MiniGamePanel : UIBehaviour
     public void WinMiniGame()
     {
         gameObject.SetActive(false);
-        Station.ProduceRecipe();
+        if(Station is MixingStation) 
+        {
+            (Station as MixingStation).ProduceRecipe();
+        }
+        else
+        {
+            Station.ProduceRecipe();
+        }
     }
 
     public void LoseMiniGame()

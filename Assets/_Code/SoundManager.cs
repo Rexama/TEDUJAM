@@ -8,6 +8,8 @@ public class SoundManager : Singleton<SoundManager>
 
 
 
+
+
     void Start()
     {
         KnifeInstance = RuntimeManager.CreateInstance(KnifeEvent);
