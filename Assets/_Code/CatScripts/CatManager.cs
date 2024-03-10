@@ -131,7 +131,7 @@ public class CatManager : MonoBehaviour
     private void _moveTailFromNest()
     {
         var catTail = Instantiate(CatTailPrefab);
-        catTail.transform.position = new Vector2(CatArea.transform.position.x, GameManager.ScreenTopEdgeY);
+        catTail.transform.position = new Vector2(CatArea.transform.position.x, GameManager.ScreenTopEdgeY-2);
         catTail.transform.DOMoveX(_selectedTargetX, _outNestPeriod).SetEase(Ease.OutSine).OnComplete(() =>
         {
             CurrentState = CatStates.Disturbing;
@@ -141,7 +141,7 @@ public class CatManager : MonoBehaviour
     private void _moveTailToNest()
     {
         var catTail = Instantiate(CatTailPrefab);
-        catTail.transform.position = new Vector2(_selectedTargetX, GameManager.ScreenTopEdgeY);
+        catTail.transform.position = new Vector2(_selectedTargetX, GameManager.ScreenTopEdgeY-2);
         catTail.transform.DOMoveX(CatArea.transform.position.x, _outNestPeriod).SetEase(Ease.OutSine).OnComplete(() =>
         {
             CurrentState = CatStates.InNest;
