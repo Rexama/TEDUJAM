@@ -2064,6 +2064,20 @@ MonoBehaviour:
       Data3: 1315970488
       Data4: -724760258
     Path: event:/SFX/Gameplay/CutIngredient
+  PotStirEvent:
+    Guid:
+      Data1: 1362999367
+      Data2: 1303410062
+      Data3: -493476985
+      Data4: -730990627
+    Path: event:/SFX/Gameplay/PotStir
+  MortarPestleEvent:
+    Guid:
+      Data1: -380891474
+      Data2: 1087909500
+      Data3: -955306111
+      Data4: 404653988
+    Path: event:/SFX/Gameplay/MotarPestle
 --- !u!114 &1942506909
 MonoBehaviour:
   m_ObjectHideFlags: 0

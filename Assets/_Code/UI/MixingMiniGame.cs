@@ -55,12 +55,15 @@ public class MixingMiniGame : MiniGamePanel
     {
         if (Input.GetMouseButtonDown(0) && IsInside())
         {
+            SoundManager.Instance.PotStirInstance.start();
             mixing = true;
         }
         else if (Input.GetMouseButtonUp(0) && mixing)
         {
             if (degreesTurned < degreesTarget)
             {
+                Debug.Log("durdu");
+                SoundManager.Instance.PotStirInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 LoseMiniGame();
             }
         }
@@ -86,6 +89,8 @@ public class MixingMiniGame : MiniGamePanel
             RectTransformUtility.ScreenPointToLocalPointInRectangle(area, Input.mousePosition, null, out var rectPos);
             if (!IsInside())
             {
+                Debug.Log("durdu");
+                SoundManager.Instance.PotStirInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 LoseMiniGame();
             }
             if (degreesTurned >= degreesTarget)
